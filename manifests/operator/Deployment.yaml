@@ -59,11 +59,11 @@ spec:
               port: 8064
             initialDelaySeconds: 30
             periodSeconds: 20
-          volumeMounts:
-          - name: halyard-custom-config
-            mountPath: /opt/spinnaker/config/halyard-local.yml
-            subPath: halyard-local.yml
-      volumes:
-      - name: halyard-custom-config
-        configMap:
-          name: halyard-custom-config
+      #     volumeMounts:
+      #     - name: halyard-custom-config
+      #       mountPath: /opt/spinnaker/config/halyard-local.yml
+      #       subPath: halyard-local.yml
+      # volumes:
+      # - name: halyard-custom-config
+      #   configMap:
+      #     name: halyard-custom-config

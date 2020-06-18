@@ -1,3 +1,4 @@
+# This configmap allows us to switch to the halconfig-marketplace bucket instead of the halconfig bucket; this is currently turned off.
 apiVersion: v1
 kind: ConfigMap
 metadata:
