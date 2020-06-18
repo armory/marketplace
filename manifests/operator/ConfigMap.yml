@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: halyard-custom-config
+  namespace: spinnaker-operator
+data:
+  halyard-local.yml: |
+    spinnaker:
+      config:
+        input:
+          bucket: halconfig-marketplace
