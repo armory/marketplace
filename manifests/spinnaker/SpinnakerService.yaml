@@ -56,3 +56,4 @@ spec:
           serviceAccountName: front50
       gate:
         healthEndpoint: /api/v1/health
+  expose: {}
