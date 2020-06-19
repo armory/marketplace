@@ -27,11 +27,11 @@ spec:
             serviceAccount: true
           enabled: true
           primaryAccount: spinnaker
-      # security:
-      #   uiSecurity:
-      #     overrideBaseUrl: https://ENDPOINT
-      #   apiSecurity:
-      #     overrideBaseUrl: https://ENDPOINT/api/v1
+      security:
+        uiSecurity:
+          overrideBaseUrl: https://spinnaker.domain.com
+        apiSecurity:
+          overrideBaseUrl: https://spinnaker.domain.com/api/v1
     profiles:
       deck:
         settings-local.js: |
