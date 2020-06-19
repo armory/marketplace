@@ -24,11 +24,11 @@ spec:
           - 3g3248j9dxzytipo7aj4jlwiu
           - --public-key-version
           - "1"
-          # image: amazon/aws-cli
+          # source image: amazon/aws-cli
           image: 117940112483.dkr.ecr.us-east-1.amazonaws.com/3a387dea-4960-43d1-8539-c26bbc74cae6/cg-3837021117/amazon/aws-cli:1.0.0-latest
       containers:
         - name: spinnaker-operator
-          # image: armory/armory-operator:1.0.0
+          # source image: armory/armory-operator:1.0.0
           image: 117940112483.dkr.ecr.us-east-1.amazonaws.com/3a387dea-4960-43d1-8539-c26bbc74cae6/cg-3837021117/armory/armory-operator:1.0.0-latest
           command:
             - spinnaker-operator
@@ -41,7 +41,7 @@ spec:
             - name: OPERATOR_NAME
               value: "spinnaker-operator"
         - name: halyard
-          # image: armory/halyard-armory:operator-fa2cee7d1fe561cd709894198806f072e6eac1e1
+          # source image: armory/halyard-armory:operator-fa2cee7d1fe561cd709894198806f072e6eac1e1
           image: 117940112483.dkr.ecr.us-east-1.amazonaws.com/3a387dea-4960-43d1-8539-c26bbc74cae6/cg-3837021117/armory/halyard-armory:1.0.0-latest
           imagePullPolicy: IfNotPresent
           ports:

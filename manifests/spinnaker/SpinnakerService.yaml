@@ -7,6 +7,7 @@ metadata:
 spec:
   spinnakerConfig:
     config:
+      version: 2.19.9
       artifacts:
         http:
           accounts: []
@@ -16,7 +17,7 @@ spec:
       persistentStorage:
         persistentStoreType: s3
         s3:
-          bucket: BUCKETNAME
+          bucket: BUCKET_NAME
       providers:
         kubernetes:
           accounts:
@@ -27,18 +28,14 @@ spec:
           enabled: true
           primaryAccount: spinnaker
       # security:
-      #   apiSecurity:
-      #     overrideBaseUrl: https://ENDPOINT/api/v1
       #   uiSecurity:
       #     overrideBaseUrl: https://ENDPOINT
-      version: 2.19.9
+      #   apiSecurity:
+      #     overrideBaseUrl: https://ENDPOINT/api/v1
     profiles:
-      clouddriver: {}
       deck:
         settings-local.js: |
           window.spinnakerSettings.feature.kustomizeEnabled = true;
-      echo: {}
-      fiat: {}
       front50:
         spinnaker.s3.versioning: false
       gate:
@@ -50,21 +47,12 @@ spec:
             internalProxies: .*
             protocolHeader: X-Forwarded-Proto
             remoteIpHeader: X-Forwarded-For
-      igor: {}
-      kayenta: {}
-      orca: {}
-      rosco: {}
     service-settings:
       clouddriver:
         kubernetes:
           serviceAccountName: clouddriver
-      deck: {}
-      echo: {}
-      fiat: {}
-      front50: {}
+      front50:
+        kubernetes:
+          serviceAccountName: front50
       gate:
         healthEndpoint: /api/v1/health
-      igor: {}
-      kayenta: {}
-      orca: {}
-      rosco: {}
